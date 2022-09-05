@@ -13,52 +13,71 @@
 //   int mutiply(int num1, int num2) => num1 + num2;
 // }
 
+// void main() {
+//   Jss1 A = Jss1(
+//       firstname: 'pius',
+//       lastname: 'idogun',
+//       subject: 'chemistry',
+//       score: 90,
+//       age: 17);
+//   print('pius');
+//   print(A.remark());
+//   print(A.isfirstname('pius'));
+//   print(A.mycomment());
+//   print(A.jss2(70));
+// }
+
+// class Jss1 {
+//   Jss1(
+//       {required this.firstname,
+//       required this.lastname,
+//       required this.subject,
+//       required this.score,
+//       required this.age});
+
+//   String firstname;
+//   String lastname;
+//   String subject;
+//   int score;
+//   int age;
+
+//   String remark() =>
+//       'i am $firstname $lastname, am in class three. my best subject is $subject';
+
+//   bool isfirstname(String firstname) {
+//     if (this.firstname == 'efe') {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+
+//   String mycomment() => '$firstname is promoted to Jss2';
+
+//   String jss2(int score) {
+//     if (this.score < 90) {
+//       return 'promoted to Jss2';
+//     } else {
+//       return 'repeat jss1';
+//     }
+//   }
+// }
+
 void main() {
-  Jss1 A = Jss1(
-      firstname: 'pius',
-      lastname: 'idogun',
-      subject: 'chemistry',
-      score: 90,
-      age: 17);
-  print('pius');
-  print(A.remark());
-  print(A.isfirstname('pius'));
-  print(A.mycomment());
-  print(A.jss2(70));
+  var person = Person(age: 20, name: 'tobi');
+  print(person);
+  print(person.age);
+  print(person.personage());
 }
 
-class Jss1 {
-  Jss1(
-      {required this.firstname,
-      required this.lastname,
-      required this.subject,
-      required this.score,
-      required this.age});
-
-  String firstname;
-  String lastname;
-  String subject;
-  int score;
+class Person {
+  String name;
   int age;
 
-  String remark() =>
-      'i am $firstname $lastname, am in class three. my best subject is $subject';
+  Person({required this.name, required this.age});
 
-  bool isfirstname(String firstname) {
-    if (this.firstname == 'efe') {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  String mycomment() => '$firstname is promoted to Jss2';
-
-  String jss2(int score) {
-    if (this.score < 90) {
-      return 'promoted to Jss2';
-    } else {
-      return 'repeat jss1';
-    }
+  String personage() {
+    return '$name will be 100years in time';
   }
 }
+// }
