@@ -63,21 +63,46 @@
 //   }
 // }
 
+// void main() {
+//   var person = Person(age: 20, name: 'tobi');
+//   print(person);
+//   print(person.age);
+//   print(person.personage());
+// }
+
+// class Person {
+//   String name;
+//   int age;
+
+//   Person({required this.name, required this.age});
+
+//   String personage() {
+//     return '$name will be 100years in time';
+//   }
+// }
+// // }
+
+import 'dart:io';
+
 void main() {
-  var person = Person(age: 20, name: 'tobi');
-  print(person);
-  print(person.age);
-  print(person.personage());
+  // print("object");
+  stdout.write("What's your name? ");
+  // String? name = stdin.readLineSync();
+  // print("Hi, $name! What is your age?");
+  // int age = int.parse("45");
+
+  // int yearsToHunderd = 100 - age;
+  // print("$name, You have $yearsToHunderd years to be 100");
 }
 
-class Person {
-  String name;
-  int age;
 
-  Person({required this.name, required this.age});
-
-  String personage() {
-    return '$name will be 100years in time';
-  }
-}
+ 
+// void main() {
+//   stdout.write("Please choose a number: ");
+//   int number = int.parse(stdin.readLineSync());
+//   for (var i = 1; i <= number; i++) {
+//     if (number % i == 0) {
+//       print(i);
+//     }
+//   }
 // }
