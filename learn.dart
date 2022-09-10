@@ -1,3 +1,13 @@
+void main() {
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+  for (var i in a) {
+    if (i < 13) {
+      print(i);
+    }
+  }
+}
+
 // void main() {
 //   Greeting unit1 = Greeting('hello');
 //   print(unit1.sayhelo);
@@ -81,25 +91,61 @@
 //   }
 // }
 
-import 'dart:io';
+// import 'dart:io';
 
-void main() {
-  int? number;
+// void main() {
+//   int? number;
 
-  print("Enter a number : ");
-  var data = stdin.readLineSync();
+//   print("Enter a number : ");
+//   var data = stdin.readLineSync();
 
-  number = int.tryParse(data ?? '-1');
+//   number = int.tryParse(data ?? '-1');
 
-  if (number == null) {
-    print("Invalid input.");
-  } else if (number.isEven) {
-    print("$number is an even number");
-  } else if (number.isOdd) {
-    print("$number is an odd number");
-  }
-}
+//   if (number == null) {
+//     print("Invalid input.");
+//   } else if (number.isEven) {
+//     print("$number is an even number");
+//   } else if (number.isOdd) {
+//     print("$number is an odd number");
+//   }
+// }
+// Main function
+// void main() {
+  
+  // // Creating a geek list
+  // var geekList = [121, 12, 33, 14, 3];
 
+  // // Declaring and assigning the
+  // // largestGeekValue and smallestGeekValue
+  // var largestGeekValue = geekList[0];
+  // var smallestGeekValue = geekList[0];
+
+  // for (var i = 0; i < geekList.length; i++) {
+  //   // Checking for largest value in the list
+  //   if (geekList[i] > largestGeekValue) {
+  //     largestGeekValue = geekList[i];
+  //   }
+
+  //   // Checking for smallest value in the list
+  //   if (geekList[i] < smallestGeekValue) {
+  //     smallestGeekValue = geekList[i];
+  //   }
+  // }
+
+  // // Printing the values
+  // print("Smallest value in the list : $smallestGeekValue");
+  // print("Largest value in the list : $largestGeekValue");
+
+//   or
+//   var geekList = [121, 12, 33, 14, 3];
+
+//   // Sorting the list
+//   geekList.sort();
+
+//   // Printing the values
+//   print("Smallest value in the list : ${geekList.first}");
+//   print("Largest value in the list : ${geekList.last}");
+// }
 
 
 
