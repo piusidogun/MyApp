@@ -1,14 +1,29 @@
+
+void main (){
+  
 void main() {
-  var a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-  var b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 89];
-
-  var aSet = a.toSet();
-  var bSet = b.toSet();
-
-  var nonCommonSet = aSet.union(bSet).difference(aSet.intersection(bSet));
-  var nonCommonList = nonCommonSet.toList()..sort();
-  print(nonCommonList);
+  
+  stdout.write("Please give a word: ");
+  String input = stdin.readLineSync().toLowerCase();
+  String revInput = input.split('').reversed.join('');
+  
+  // Ternary operator
+  input == revInput;
+     print("The word is palindrome")
+       print("The word is not a palindrome");
 }
+
+// void main() {
+//   var a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+//   var b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 89];
+
+//   var aSet = a.toSet();
+//   var bSet = b.toSet();
+
+//   var nonCommonSet = aSet.union(bSet).difference(aSet.intersection(bSet));
+//   var nonCommonList = nonCommonSet.toList()..sort();
+//   print(nonCommonList);  
+// }
 
 
 
