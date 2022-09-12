@@ -1,18 +1,31 @@
 import 'dart:io';
 
 void main() {
-  stdout.write('Enter Words or number');
+  var a = [1, 4, 9, 16, 25, 36, 39, 49, 64, 81, 100];
 
-  String? original = stdin.readLineSync();
+  var f = [];
 
-  String? reverse = original!.split('').reversed.join('');
-
-  if (original == reverse) {
-    print('Its A Palindrome');
-  } else {
-    print('Its A Not Palindrome');
-  }
+  for (var e in a)
+    if (e.isOdd) {
+      f.add(e);
+    }
+  print(f);
 }
+
+
+// void main() {
+//   stdout.write('Enter Words or number');
+
+//   String? original = stdin.readLineSync();
+
+//   String? reverse = original!.split('').reversed.join('');
+
+//   if (original == reverse) {
+//     print('Its A Palindrome');
+//   } else {
+//     print('Its A Not Palindrome');
+//   }
+// }
 
 // void main() {
   
