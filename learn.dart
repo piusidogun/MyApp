@@ -1,17 +1,30 @@
+import 'dart:io';
 
-void main (){
-  
 void main() {
-  
-  stdout.write("Please give a word: ");
-  String input = stdin.readLineSync().toLowerCase();
-  String revInput = input.split('').reversed.join('');
-  
-  // Ternary operator
-  input == revInput;
-     print("The word is palindrome")
-       print("The word is not a palindrome");
+  stdout.write('Enter Words or number');
+
+  String? original = stdin.readLineSync();
+
+  String? reverse = original!.split('').reversed.join('');
+
+  if (original == reverse) {
+    print('Its A Palindrome');
+  } else {
+    print('Its A Not Palindrome');
+  }
 }
+
+// void main() {
+  
+//   stdout.write("Please give a word: ");
+//   String input = stdin.readLineSync().toLowerCase();
+//   String revInput = input.split('').reversed.join('');
+  
+//   // Ternary operator
+//   input == revInput;
+//      print("The word is palindrome")
+//        print("The word is not a palindrome");
+// }
 
 // void main() {
 //   var a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
