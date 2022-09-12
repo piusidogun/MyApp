@@ -1,12 +1,26 @@
 void main() {
-  stdout.write("Please choose a number: ");
-  int number = int.parse(stdin.readLineSync());
-  for (var i = 1; i <= number; i++) {
-    if (number % i == 0) {
-      print(i);
-    }
-  }
+  var a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+  var b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 89];
+
+  var aSet = a.toSet();
+  var bSet = b.toSet();
+
+  var nonCommonSet = aSet.union(bSet).difference(aSet.intersection(bSet));
+  var nonCommonList = nonCommonSet.toList()..sort();
+  print(nonCommonList);
 }
+
+
+
+// void main() {
+//   stdout.write("Please choose a number: ");
+//   int number = int.parse(stdin.readLineSync());
+//   for (var i = 1; i <= number; i++) {
+//     if (number % i == 0) {
+//       print(i);
+//     }
+//   }
+// }
 
 // void main() {
 //   List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
