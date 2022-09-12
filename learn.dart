@@ -1,12 +1,22 @@
 void main() {
-  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-
-  for (var i in a) {
-    if (i < 13) {
+  stdout.write("Please choose a number: ");
+  int number = int.parse(stdin.readLineSync());
+  for (var i = 1; i <= number; i++) {
+    if (number % i == 0) {
       print(i);
     }
   }
 }
+
+// void main() {
+//   List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+//   for (var i in a) {
+//     if (i < 13) {
+//       print(i);
+//     }
+//   }
+// }
 
 // void main() {
 //   Greeting unit1 = Greeting('hello');
