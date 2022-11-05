@@ -1,45 +1,93 @@
-import 'dart:ffi';
 import 'dart:io';
 
 import 'dart:math';
-
-void main() {
-  print("Type exit to quit the game");
-  guessingGame();
-}
-
-guessingGame() {
-  final random = Random();
-  int randNumber = random.nextInt(100);
-  int attempt = 0;
-
-  while (true) {
-    attempt += 1;
-    stdout.write("Please choose a number between 0 and 100: ");
-    String chosenNumber = stdin.readLineSync().toString();
-
-    // Make sure user does not go out of limits
-    if (chosenNumber.toLowerCase() == "exit") {
-      print("\nBye");
-      break;
-    } else if (int.parse(chosenNumber) > 100) {
-      print("Please do not go over 100");
-      continue;
-    }
-
-    // Main logic
-    if (int.parse(chosenNumber) == randNumber) {
-      print("Bingo! You tried $attempt times\n");
-      continue;
-    } else if (int.parse(chosenNumber) > randNumber) {
-      print("You are higher");
-      continue;
-    } else {
-      print("You are lower");
-      continue;
+ 
+bool isPrime(N) {
+  for (var i = 2; i <= N / i; ++i) {
+    if (N % i == 0) {
+      return false;
     }
   }
+  return true;
 }
+ 
+void main() {
+  stdout.write("Enter N ");
+  var N = int.parse(stdin.readLineSync()!);
+  if (isPrime(N)) {
+    print('$N is a prime number.');
+  } else {
+    print('$N is not a prime number.');
+  }
+}
+// void main() {
+//   var rand = new Random();
+
+//   print('welcome to Numberguess');
+
+//   var correct = false;
+//   var guess = 0;
+//   int number = rand.nextInt(50) + 1;
+
+//   while (!correct) {
+//     print('');
+//     stdout.write('enter a number btween 1 and 50>');
+//     try {
+//       guess = int.parse(stdin.readLineSync());
+//     } on FormatException {
+//       print('that isnt a recognized number, try again.');
+//       continue;
+//     }
+//     if (guess < number)
+//       print("the target number is higher");
+//     else if (guess > number)
+//       print("the target number is lower");
+//     else {
+//       print("congratulations! you win!");
+//       correct = true;
+//     }
+//   }
+// }
+
+
+   
+// void main() {
+//   print("Type exit to quit the game");
+//   guessingGame();
+// }
+
+// guessingGame() {
+//   final random = Random();
+//   int randNumber = random.nextInt(50);
+//   int attempt = 0;
+
+//   while (true) {
+//     attempt += 1;
+//     stdout.write("Please choose a number between 0 and 50: ");
+//     String chosenNumber = stdin.readLineSync().toString();
+
+//     // Make sure user does not go out of limits
+//     if (chosenNumber.toLowerCase() == "exit") {
+//       print("\nBye");
+//       break;
+//     } else if (int.parse(chosenNumber) > 100) {
+//       print("Please do not go over 50");
+//       continue;
+//     }
+
+//     // Main logic
+//     if (int.parse(chosenNumber) == randNumber) {
+//       print("Bingo! You tried $attempt times\n");
+//       continue;
+//     } else if (int.parse(chosenNumber) > randNumber) {
+//       print("You are higher");
+//       continue;
+//     } else {
+//       print("You are lower");
+//       continue;
+//     }
+//   }
+// }
 
 
 // void main() {
